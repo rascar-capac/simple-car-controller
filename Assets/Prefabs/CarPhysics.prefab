@@ -1,0 +1,278 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5651925160147005178
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5190313723666897298, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190313723666897298, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190313723666897298, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190313723666897298, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190313723666897298, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190313723666897298, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190313723666897298, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190313723666897298, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190313723666897298, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190313723666897298, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190313723666897298, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190313723666897300, guid: 3d522d358580556479756a57ffcc2135,
+        type: 3}
+      propertyPath: m_Name
+      value: CarPhysics
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d522d358580556479756a57ffcc2135, type: 3}
+--- !u!23 &461646629213160619 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5190313724432771665, guid: 3d522d358580556479756a57ffcc2135,
+    type: 3}
+  m_PrefabInstance: {fileID: 5651925160147005178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &461646629576357742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5190313723666897300, guid: 3d522d358580556479756a57ffcc2135,
+    type: 3}
+  m_PrefabInstance: {fileID: 5651925160147005178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &3372304711485232531
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461646629576357742}
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 80
+  m_CollisionDetection: 1
+--- !u!114 &4844166752431708219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461646629576357742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e0c6cf4e4765746bc1039215a35be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _axleInfos:
+  - _leftWheel: {fileID: 4230422739509346108}
+    _rightWheel: {fileID: 6172674577564567955}
+    _hasMotor: 1
+    _hasSteering: 1
+  - _leftWheel: {fileID: 55532413486752704}
+    _rightWheel: {fileID: 838373563581435430}
+    _hasMotor: 0
+    _hasSteering: 0
+  _fullMotorTorque: 2000
+  _maxSpeed: 100
+  _maxReverseSpeed: 30
+  _fullSteeringAngle: 10
+  _brakesFactor: 1
+  _handbrakeFactor: 5
+  _engineBrakeFactor: 0.3
+  _rearLight: {fileID: 461646629213160619}
+  _brakeLightColor: {r: 1, g: 0, b: 0, a: 1}
+  _reverseLightColor: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
+  _vcam: {fileID: 0}
+  _noiseFactor: 0.3
+  _initialFOV: 60
+  _maxSpeedFOV: 90
+--- !u!1 &3946352601578004979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8695299917882150665, guid: 3d522d358580556479756a57ffcc2135,
+    type: 3}
+  m_PrefabInstance: {fileID: 5651925160147005178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &4230422739509346108
+WheelCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946352601578004979}
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 4
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 5
+  m_Enabled: 1
+--- !u!1 &5469048369555514237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 399234290802396551, guid: 3d522d358580556479756a57ffcc2135,
+    type: 3}
+  m_PrefabInstance: {fileID: 5651925160147005178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &6172674577564567955
+WheelCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5469048369555514237}
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 4
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 5
+  m_Enabled: 1
+--- !u!1 &5469048370614999217 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 399234289742919243, guid: 3d522d358580556479756a57ffcc2135,
+    type: 3}
+  m_PrefabInstance: {fileID: 5651925160147005178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &55532413486752704
+WheelCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5469048370614999217}
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 4
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 5
+  m_Enabled: 1
+--- !u!1 &5469048371168154577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 399234289189764395, guid: 3d522d358580556479756a57ffcc2135,
+    type: 3}
+  m_PrefabInstance: {fileID: 5651925160147005178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &838373563581435430
+WheelCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5469048371168154577}
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 4
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 5
+  m_Enabled: 1
