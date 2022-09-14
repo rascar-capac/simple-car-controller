@@ -35,6 +35,7 @@ public class CarControllerPhysics : MonoBehaviour
     private float _accelerationInput;
     private float _steeringInput;
     private bool _handbrakeIsSet;
+    private float _initialStiffness;
 #endregion
 
 
@@ -43,7 +44,14 @@ public class CarControllerPhysics : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-        _axleInfos[0].LeftWheel.ConfigureVehicleSubsteps(5, 12, 15); // to avoid jitter
+        _rb.centerOfMass += new Vector3(0f, -0.3f);
+        // to avoid jitter
+        foreach (var axleInfo in _axleInfos)
+        {
+            axleInfo.LeftWheel.ConfigureVehicleSubsteps(5, 12, 15);
+            axleInfo.RightWheel.ConfigureVehicleSubsteps(5, 12, 15);
+        }
+        _initialStiffness = _axleInfos[0].LeftWheel.sidewaysFriction.stiffness;
     }
 
     private void FixedUpdate()
@@ -113,6 +121,12 @@ public class CarControllerPhysics : MonoBehaviour
             axleInfo.RightWheel.motorTorque = 0f;
             axleInfo.LeftWheel.brakeTorque = 0f;
             axleInfo.RightWheel.brakeTorque = 0f;
+            WheelFrictionCurve frictionCurve = axleInfo.LeftWheel.sidewaysFriction;
+            frictionCurve.stiffness = _initialStiffness;
+            axleInfo.LeftWheel.sidewaysFriction = frictionCurve;
+            frictionCurve = axleInfo.RightWheel.sidewaysFriction;
+            frictionCurve.stiffness = _initialStiffness;
+            axleInfo.RightWheel.sidewaysFriction = frictionCurve;
             if (axleInfo.HasSteering)
             {
                 axleInfo.LeftWheel.steerAngle = steeringAngle;
@@ -150,6 +164,12 @@ public class CarControllerPhysics : MonoBehaviour
             {
                 axleInfo.LeftWheel.brakeTorque = _fullMotorTorque * _handbrakeFactor;
                 axleInfo.RightWheel.brakeTorque = _fullMotorTorque * _handbrakeFactor;
+                frictionCurve = axleInfo.LeftWheel.sidewaysFriction;
+                frictionCurve.stiffness = 0f;
+                axleInfo.LeftWheel.sidewaysFriction = frictionCurve;
+                frictionCurve = axleInfo.RightWheel.sidewaysFriction;
+                frictionCurve.stiffness = 0f;
+                axleInfo.RightWheel.sidewaysFriction = frictionCurve;
             }
         }
     }

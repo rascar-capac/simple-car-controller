@@ -1927,16 +1927,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 55532413486752704, guid: 7a31fdab8479af544a2e0763f3064e91,
-        type: 3}
-      propertyPath: m_ForwardFriction.m_Stiffness
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 55532413486752704, guid: 7a31fdab8479af544a2e0763f3064e91,
-        type: 3}
-      propertyPath: m_SidewaysFriction.m_Stiffness
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 461646629576357736, guid: 7a31fdab8479af544a2e0763f3064e91,
         type: 3}
       propertyPath: m_RootOrder
@@ -1997,41 +1987,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarPhysics
       objectReference: {fileID: 0}
-    - target: {fileID: 838373563581435430, guid: 7a31fdab8479af544a2e0763f3064e91,
+    - target: {fileID: 461646629865549167, guid: 7a31fdab8479af544a2e0763f3064e91,
         type: 3}
-      propertyPath: m_ForwardFriction.m_Stiffness
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 838373563581435430, guid: 7a31fdab8479af544a2e0763f3064e91,
-        type: 3}
-      propertyPath: m_SidewaysFriction.m_Stiffness
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4230422739509346108, guid: 7a31fdab8479af544a2e0763f3064e91,
-        type: 3}
-      propertyPath: m_ForwardFriction.m_Stiffness
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4230422739509346108, guid: 7a31fdab8479af544a2e0763f3064e91,
-        type: 3}
-      propertyPath: m_SidewaysFriction.m_Stiffness
-      value: 2
+      propertyPath: m_LocalScale.x
+      value: 1.97
       objectReference: {fileID: 0}
     - target: {fileID: 4844166752431708219, guid: 7a31fdab8479af544a2e0763f3064e91,
         type: 3}
       propertyPath: _vcam
       value: 
       objectReference: {fileID: 1553639083}
-    - target: {fileID: 6172674577564567955, guid: 7a31fdab8479af544a2e0763f3064e91,
-        type: 3}
-      propertyPath: m_ForwardFriction.m_Stiffness
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6172674577564567955, guid: 7a31fdab8479af544a2e0763f3064e91,
-        type: 3}
-      propertyPath: m_SidewaysFriction.m_Stiffness
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a31fdab8479af544a2e0763f3064e91, type: 3}
 --- !u!1 &1521961292

@@ -89,13 +89,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461646629576357742}
   serializedVersion: 2
-  m_Mass: 1000
+  m_Mass: 1500
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 80
+  m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!114 &4844166752431708219
 MonoBehaviour:
@@ -119,9 +119,9 @@ MonoBehaviour:
     _hasMotor: 0
     _hasSteering: 0
   _fullMotorTorque: 2000
-  _maxSpeed: 100
+  _maxSpeed: 150
   _maxReverseSpeed: 30
-  _fullSteeringAngle: 10
+  _fullSteeringAngle: 20
   _brakesFactor: 1
   _handbrakeFactor: 5
   _engineBrakeFactor: 0.3
@@ -160,13 +160,13 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 4
+    m_Stiffness: 3
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_Enabled: 1
 --- !u!1 &5469048369555514237 stripped
 GameObject:
@@ -196,13 +196,13 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 4
+    m_Stiffness: 3
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_Enabled: 1
 --- !u!1 &5469048370614999217 stripped
 GameObject:
@@ -232,13 +232,13 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 4
+    m_Stiffness: 3
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_Enabled: 1
 --- !u!1 &5469048371168154577 stripped
 GameObject:
@@ -268,11 +268,11 @@ WheelCollider:
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 4
+    m_Stiffness: 3
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_Enabled: 1
